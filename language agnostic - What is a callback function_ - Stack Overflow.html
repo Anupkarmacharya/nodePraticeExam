@@ -1,0 +1,3313 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://stackoverflow.com/questions/824234/what-is-a-callback-function -->
+<html itemscope="" itemtype="http://schema.org/QAPage" data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>language agnostic - What is a callback function? - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">    
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="What is a callback function?">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="What is a callback function?
+">
+    <meta property="og:url" content="http://stackoverflow.com/questions/824234/what-is-a-callback-function">
+    <link rel="canonical" href="./language agnostic - What is a callback function_ - Stack Overflow_files/language agnostic - What is a callback function_ - Stack Overflow.html">
+
+    
+    
+    <script type="text/javascript" async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/ados"></script><script async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/quant.js"></script><script async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/beacon.js"></script><script async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/analytics.js"></script><script type="text/javascript" async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/ados.js"></script><script src="./language agnostic - What is a callback function_ - Stack Overflow_files/jquery.min.js"></script>
+    <script src="./language agnostic - What is a callback function_ - Stack Overflow_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./language agnostic - What is a callback function_ - Stack Overflow_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;What is a callback function?&#39;" href="http://stackoverflow.com/feeds/question/824234">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/824234/what-is-a-callback-function">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/824234/what-is-a-callback-function">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/824234/what-is-a-callback-function">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:2,shownCommentCount:2,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:824234});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '824234');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1453960155,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableSocialMediaInSharePopup":true},"user":{"fkey":"b995e534091206dafc3db11160a17d0c","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"81a8778ff139","js/moderator.en.js":"481e310df8f0","js/full-anon.en.js":"e8ae6ece1ef1","js/full.en.js":"29116d259397","js/wmd.en.js":"9def8363cc20","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"f58acd4f09d3","js/help.en.js":"54b998574be9","js/tageditor.en.js":"84750e4a4944","js/tageditornew.en.js":"aca77ee91ef6","js/inline-tag-editing.en.js":"658f5f3855d1","js/revisions.en.js":"c2bb6b44f707","js/review.en.js":"058f06f1a51d","js/tagsuggestions.en.js":"78eee7c19ab2","js/post-validation.en.js":"57a55b1c6ec2","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"c36488559e14","js/keyboard-shortcuts.en.js":"e20a9925fed5","js/external-editor.en.js":"cf58cc6630ef","js/external-editor.en.js":"cf58cc6630ef","js/snippet-javascript.en.js":"ed9778c326ff","js/snippet-javascript-codemirror.en.js":"fcc5427c751f"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/full-anon.en.js"></script><script async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/snippet-javascript.en.js"></script><script async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/post-validation.en.js"></script><script type="text/javascript" src="./language agnostic - What is a callback function_ - Stack Overflow_files/adFeedback.js"></script><link rel="stylesheet" href="./language agnostic - What is a callback function_ - Stack Overflow_files/adFeedback.css"><link type="text/css" rel="stylesheet" href="./language agnostic - What is a callback function_ - Stack Overflow_files/jobs.min.css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f824234%2fwhat-is-a-callback-function" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f824234%2fwhat-is-a-callback-function" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 151 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+    <a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f824234%2fwhat-is-a-callback-function" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f824234%2fwhat-is-a-callback-function" class="login-link">log in</a>
+
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                            <a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                            <li><a id="nav-jobs" href="http://stackoverflow.com/jobs">Jobs</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                                            </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+<div id="herobox">
+    <div id="hero-content">
+            <div id="close"><a title="click to minimize">_</a></div>
+        <div id="blurb">
+            Stack Overflow is a community of 4.7 million programmers, just like you, helping each other.
+            <br>
+                <br>Join them; it only takes a minute:<br>
+            <br>
+            <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f824234%2fwhat-is-a-callback-function" id="tell-me-more" class="button">Sign up</a>
+        </div>
+        <div id="desc">
+            <b>Join the Stack Overflow community to:</b>
+            <ol id="hiw">
+                <li id="q">Ask programming questions
+                </li>
+                <li id="an">Answer and help your peers
+                </li>
+                <li id="b">Get recognized for your expertise
+                </li>
+            </ol>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script>
+</div>
+			<div id="question-header">
+                <h1 itemprop="name"><a href="./language agnostic - What is a callback function_ - Stack Overflow_files/language agnostic - What is a callback function_ - Stack Overflow.html" class="question-hyperlink">What is a callback function?</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="824234" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk770206088",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk770206088"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjozMjI1MTQsImNoIjoxMTc4LCJjayI6e30sImNyIjoxMjY3ODIyLCJkaSI6ImQwODA5ODBhY2FhMzQ2NzE4YjMxYWU2M2FmOTkyZDNjIiwiZG0iOjEsImZjIjoxMzY2MzIzLCJmbCI6ODY0MjI2LCJpcCI6IjIwMi4xNjYuMjA3LjM0Iiwia3ciOiJsYW5ndWFnZS1hZ25vc3RpYyxjYWxsYmFjayIsIm53IjoyMiwicGMiOjAsImVjIjowLCJwciI6MTU2OCwicnQiOjEsInJmIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5ucC8iLCJzdCI6ODI3NywidWsiOiJ1ZTEtM2VjYTlmNDMxNWFmNGJhMDlkNDliNWViZTEwNzAzMTYiLCJ6biI6NDMsInRzIjoxNDUzOTYwMTU2OTc3LCJiZiI6dHJ1ZSwicG4iOiJhZHplcms3NzAyMDYwODgiLCJ1ciI6Imh0dHA6Ly9zdGFja292ZXJmbG93LmNvbS9qb2JzL3doeS1qb2JzP3V0bV9zb3VyY2U9c3RhY2tvdmVyZmxvdy5jb20mdXRtX21lZGl1bT1hZCZ1dG1fY2FtcGFpZ249Y2FuZGlkYXRlcy1hZGQtY3YmdXRtX2NvbnRlbnQ9bGItY2FyZWVycy1naXRodWIifQ&amp;s=0ZIApB_BfIjVO-D6DPFMY_PLzjA" rel="nofollow" target="_blank" title=""><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/847ff0b628984d7e82568ef9658ca863.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./language agnostic - What is a callback function_ - Stack Overflow_files/i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="824234">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">290</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" title="This is a favorite question (click again to undo)">favorite</a>
+        <div class="favoritecount"><b>183</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>What is a callback function?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/language-agnostic" class="post-tag js-gps-track" title="show questions tagged &#39;language-agnostic&#39;" rel="tag">language-agnostic</a> <a href="http://stackoverflow.com/questions/tagged/callback" class="post-tag js-gps-track" title="show questions tagged &#39;callback&#39;" rel="tag">callback</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/824234" title="short permalink to this question" class="short-link" id="link-post-824234">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/824234/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/824234/revisions" title="show all edits to this post">edited <span title="2009-05-05 16:14:03Z" class="relativetime">May 5 '09 at 16:14</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1820/cheekysoft"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/b24d350717de2b0432a76043e01c8a8a" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1820/cheekysoft">Cheekysoft</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 20234" dir="ltr">20.2k</span><span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span><span title="54 silver badges"><span class="badge2"></span><span class="badgecount">54</span></span><span title="73 bronze badges"><span class="badge3"></span><span class="badgecount">73</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2009-05-05 10:18:10Z" class="relativetime">May 5 '09 at 10:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details">
+        paul
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-824234" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-50023952" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">you can find here: <a href="http://stackoverflow.com/a/9652434/3343174">stackoverflow.com/a/9652434/3343174</a> the best explanation about callbacks</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3343174/fakher" title="742 reputation" class="comment-user">Fakher</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment50023952_824234"><span title="2015-06-23 08:32:35Z" class="relativetime-clean">Jun 23 '15 at 8:32</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-50567095" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">possible duplicate of <a href="http://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o">How to explain callbacks in plain english? How are they different from calling one function from another function?</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/4370109/brian-tompsett-%e6%b1%a4%e8%8e%b1%e6%81%a9" title="2477 reputation" class="comment-user">Brian Tompsett - 汤莱恩</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment50567095_824234"><span title="2015-07-08 08:41:17Z" class="relativetime-clean">Jul 8 '15 at 8:41</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-824234" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								16 Answers
+                                <span style="display:none;" itemprop="answerCount">16</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active">
+            active</a>
+        <a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="7549753"></a>
+<div id="answer-7549753" class="answer" data-answerid="7549753" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="7549753">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">250</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Developers are often confused by what a callback is because of the name of the damned thing.</p>
+
+<p>A callback function is a function which is:</p>
+
+<ul>
+<li>passed as an argument to another function, and,</li>
+<li>is invoked after some kind of event. </li>
+</ul>
+
+<p>Once its parent function completes, the function passed as an argument is then called.</p>
+
+<p><strong>Psuedocode:</strong></p>
+
+<pre><code>// The callback method
+function meaningOfLife() {
+    log("The meaning of life is: 42");
+}
+
+
+// A method which accepts a callback method as an argument
+// takes a function reference to be executed when printANumber completes
+function printANumber(int number, function callbackFunction) {
+    print("The number you provided is: " + number);
+}
+
+// Driver method
+function event() {
+   printANumber(6, meaningOfLife);
+}
+</code></pre>
+
+<p><strong>Result if you called event():</strong></p>
+
+<pre><code>The number you provided is: 6
+The meaning of life is: 42
+</code></pre>
+
+<p>Callbacks are so-called due to their usage with pointer languages. If you don't use one of those, don't labour over the name 'callback'. Just understand that it is just a name to describe a method that's supplied as an argument to another method, such that when the parent method is called (whatever condition, such as a button click, a timer tick etc) and its method body completes, the callback method is then invoked, or in other words "called at the back" of the other function.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/7549753" title="short permalink to this answer" class="short-link" id="link-post-7549753">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7549753/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/7549753/revisions" title="show all edits to this post">edited <span title="2015-11-26 13:12:38Z" class="relativetime">Nov 26 '15 at 13:12</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2011-09-26 01:04:21Z" class="relativetime">Sep 26 '11 at 1:04</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/653708/8bitjunkie"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/bch50.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/653708/8bitjunkie">8bitjunkie</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,920</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7549753" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="10" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-21755417" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">4</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Should not the <code>Print_A_Number(meaningOfLife);</code> be <code>Print_A_Number(meaningOfLife());</code> instead? Thanks.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/216190/kraken" title="4193 reputation" class="comment-user">Kraken</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment21755417_7549753"><span title="2013-03-13 16:33:03Z" class="relativetime-clean">Mar 13 '13 at 16:33</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-22731752" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">5</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Your example is great but I don't see why the terminology is "callback". When is meaningOfLife "called back"?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1675976/imray" title="3123 reputation" class="comment-user">Imray</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment22731752_7549753"><span title="2013-04-11 14:51:56Z" class="relativetime-clean">Apr 11 '13 at 14:51</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-29139737" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">callback is because of the name of the damned thing - cannot agree with you more.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2458372/javadeveloper" title="1237 reputation" class="comment-user">JavaDeveloper</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment29139737_7549753"><span title="2013-10-28 05:40:34Z" class="relativetime-clean">Oct 28 '13 at 5:40</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-35951103" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This example is not correct - <code>printANumber</code> is not calling <code>meaningOfLife</code>. <code>main</code> is calling <code>meaningOfLife</code> and providing the result to <code>printANumber</code>. This is just chaining. In C/C++, if you want to implement a callback pattern you <i>will</i> end up passing a function pointer.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1591917/rohit-chatterjee" title="942 reputation" class="comment-user">Rohit Chatterjee</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment35951103_7549753"><span title="2014-05-04 05:24:04Z" class="relativetime-clean">May 4 '14 at 5:24</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-44082684" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><code>printANumber(6, meaningOfLife());</code>  This would make <code>meaningOfLife</code> evaulated ! I think the trailing <code>()</code> should be removed !</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1553886/cdt" title="1570 reputation" class="comment-user">CDT</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment44082684_7549753"><span title="2015-01-08 11:52:11Z" class="relativetime-clean">Jan 8 '15 at 11:52</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7549753" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick="">show <b>10</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1683882998",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1683882998"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjozMjI1MTQsImNoIjoxMTc4LCJjayI6e30sImNyIjoxMjY3NTk2LCJkaSI6IjNhZGUxNWJkNzFmOTRjMWE4ZjMzYjRlNzM3NmM4ZGRkIiwiZG0iOjEsImZjIjoxMzY1OTU5LCJmbCI6ODY0MjI1LCJpcCI6IjIwMi4xNjYuMjA3LjM0Iiwia3ciOiJsYW5ndWFnZS1hZ25vc3RpYyxjYWxsYmFjayIsIm53IjoyMiwicGMiOjAsImVjIjowLCJwciI6MTYwNCwicnQiOjEsInJmIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5ucC8iLCJzdCI6ODI3NywidWsiOiJ1ZTEtM2VjYTlmNDMxNWFmNGJhMDlkNDliNWViZTEwNzAzMTYiLCJ6biI6NDQsInRzIjoxNDUzOTYwMTU2OTgwLCJiZiI6dHJ1ZSwicG4iOiJhZHplcmsxNjgzODgyOTk4IiwidXIiOiJodHRwOi8vc3RhY2tvdmVyZmxvdy5jb20vam9icy9yZW1vdGU_dXRtX3NvdXJjZT1zdGFja292ZXJmbG93LmNvbSZ1dG1fbWVkaXVtPWFkJnV0bV9jYW1wYWlnbj1jYW5kaWRhdGVzLXdmaCZ1dG1fY29udGVudD1sYi13Zmgta2V5Ym9hcmQifQ&amp;s=nn9iXzzhdcGENbCNy8_8tlunse4" rel="nofollow" target="_blank" title=""><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/29f60576ed3144249580c0fcb67771e2.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./language agnostic - What is a callback function_ - Stack Overflow_files/i(1).gif"></div>
+  
+<a name="824239"></a>
+<div id="answer-824239" class="answer" data-answerid="824239" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="824239">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">67</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Note that callback is one word.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Callback_(computer_science)">The wikipedia callback page</a> explains it very well.</p>
+
+<p><em>quote from wikipedia page:</em></p>
+
+<blockquote>
+  <p>In computer programming, a callback is a reference to executable code, or a piece of executable code, that is passed as an argument to other code. This allows a lower-level software layer to call a subroutine (or function) defined in a higher-level layer.</p>
+</blockquote>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/824239" title="short permalink to this answer" class="short-link" id="link-post-824239">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/824239/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/824239/revisions" title="show all edits to this post">edited <span title="2011-12-02 11:09:29Z" class="relativetime">Dec 2 '11 at 11:09</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2009-05-05 10:19:35Z" class="relativetime">May 5 '09 at 10:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/12663/danio"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/24b686756e281f71d12cad4dec05cc25" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/12663/danio">danio</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,592</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span><span title="40 bronze badges"><span class="badge3"></span><span class="badgecount">40</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-824239" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-633074" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">10</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Nice way to present an answer.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/76465/chathuranga-chandrasekara" title="9248 reputation" class="comment-user">Chathuranga Chandrasekara</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment633074_824239"><span title="2009-05-05 10:24:13Z" class="relativetime-clean">May 5 '09 at 10:24</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-633122" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">And this also leads to the answer in a different way. The noun "callback" is that which has been "called back", in the same way something that's gone through shutdown has been shut down and something that's used to log in is a login.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/97408/anonymous" title="13467 reputation" class="comment-user">Anonymous</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment633122_824239"><span title="2009-05-05 10:43:25Z" class="relativetime-clean">May 5 '09 at 10:43</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-22731105" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">10</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This could have been a comment - basically it's a link to Wikipedia</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1675976/imray" title="3123 reputation" class="comment-user">Imray</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment22731105_824239"><span title="2013-04-11 14:37:38Z" class="relativetime-clean">Apr 11 '13 at 14:37</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-33794200" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I don't rate this answer at all..</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1795862/adaam" title="2459 reputation" class="comment-user">adaam</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment33794200_824239"><span title="2014-03-07 13:37:05Z" class="relativetime-clean">Mar 7 '14 at 13:37</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-45659795" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Wikipedia has actually got some really awesome programming stuff in its troves. I always felt like the term "callback" was best explained using the phrase, "I am going to call back to..."</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3469725/thomas" title="900 reputation" class="comment-user">Thomas</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment45659795_824239"><span title="2015-02-23 21:09:57Z" class="relativetime-clean">Feb 23 '15 at 21:09</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-824239" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="23453352"></a>
+<div id="answer-23453352" class="answer" data-answerid="23453352" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="23453352">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">60</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<h1>Opaque Definition</h1>
+
+<p>A callback function is a function you provide to another piece of code, allowing it to be called by that code.</p>
+
+<h1>Contrived example</h1>
+
+<p>Why would you want to do this? Let's say there is a service you need to invoke. If the service returns immediately, you just:</p>
+
+<ol>
+<li>Call it</li>
+<li>Wait for the result</li>
+<li>Continue once the result comes in</li>
+</ol>
+
+<p>For example, suppose the service were the <code>factorial</code> function. When you want the value of <code>5!</code>, you would invoke <code>factorial(5)</code>, and the following steps would occur:</p>
+
+<ol>
+<li><p>Your current execution location is saved (on the stack, but that's not important)</p></li>
+<li><p>Execution is handed over to <code>factorial</code></p></li>
+<li><p>When <code>factorial</code> completes, it puts the result somewhere you can get to it</p></li>
+<li><p>Execution comes back to where it was in [1]</p></li>
+</ol>
+
+<p>Now suppose <code>factorial</code> took a really long time, because you're giving it huge numbers and it needs to run on some supercomputing cluster somwhere. Let's say you expect it to take 5 minutes to return your result. You could:</p>
+
+<ol>
+<li><p>Keep your design and run your program at night when you're asleep, so that you're not staring at the screen half the time</p></li>
+<li><p>Design your program to do other things while <code>factorial</code> is doing its thing</p></li>
+</ol>
+
+<p>If you choose the second option, then callbacks might work for you.</p>
+
+<h1>End-to-end design</h1>
+
+<p>In order to exploit a callback pattern, what you want is to be able to call <code>factorial</code> in the following way:</p>
+
+<pre><code>factorial(really_big_number, what_to_do_with_the_result)
+</code></pre>
+
+<p>The second parameter, <code>what_to_do_with_the_result</code>, is a function you send along to <code>factorial</code>, in the hope that <code>factorial</code> will call it on its result before returning. </p>
+
+<p><em>Yes, this means that <code>factorial</code> needs to have been written to support callbacks.</em></p>
+
+<p>Now suppose that you want to be able to pass a parameter to your callback. Now you can't, because you're not going to be calling it, <code>factorial</code> is. So <code>factorial</code> needs to be written to allow you to pass your parameters in, and it will just hand them over to your callback when it invokes it. It might look like this:</p>
+
+<pre><code>factorial (number, callback, params)
+{
+    result = number!   // i can make up operators in my pseudocode
+    callback (result, params)
+}
+</code></pre>
+
+<p>Now that <code>factorial</code> allows this pattern, your callback might look like this:</p>
+
+<pre><code>logIt (number, logger)
+{
+    logger.log(number)
+}
+</code></pre>
+
+<p>and your call to <code>factorial</code> would be </p>
+
+<pre><code>factorial(42, logIt, logger)
+</code></pre>
+
+<p>What if you want to return something from <code>logIt</code>? Well, you can't, because <code>factorial</code> isn't paying attention to it.</p>
+
+<p>Well, why can't <code>factorial</code> just return what your callback returns?</p>
+
+<h2>Making it non-blocking</h2>
+
+<p>Since execution is meant to be handed over to the callback when <code>factorial</code> is finished, it really shouldn't return anything to its caller. And ideally, it would somehow launch its work in another thread / process / machine and return immediately so that you can continue, maybe something like this:</p>
+
+<pre><code>factorial(param_1, param_2, ...)
+{
+    new factorial_worker_task(param_1, param_2, ...);
+    return;
+}
+</code></pre>
+
+<p>This is now an "asynchronous call", meaning that when you call it, it returns immediately but hasn't really done its job yet. So you do need mechanisms to check on it, and to obtain its result when its finished, and your program has gotten more complex in the process. </p>
+
+<p>And by the way, using this pattern the <code>factorial_worker_task</code> can launch your callback asynchronously and return immediately.</p>
+
+<h2>So what do you do?</h2>
+
+<p>The answer is to stay within the callback pattern. Whenever you want to write</p>
+
+<pre><code>a = f()
+g(a)
+</code></pre>
+
+<p>and <code>f</code> is to be called asynchronously, you will instead write</p>
+
+<pre><code>f(g)
+</code></pre>
+
+<p>where <code>g</code> is passed as a callback. </p>
+
+<p><em>This fundamentally changes the flow-topology of your program</em>, and takes some getting used to. </p>
+
+<p>Your programming language could help you a lot by giving you a way to create functions on-the-fly. In the code immediately above, the function <code>g</code> might be as small as <code>print (2*a+1)</code>. If your language requires that you define this as a separate function, with an entirely unnecessary name and signature, then your life is going to get unpleasant if you use this pattern a lot. </p>
+
+<p>If, on the other hand, you language allows you to create lambdas, then you are in much better shape. You will then end up writing something like</p>
+
+<pre><code>f( func(a) { print(2*a+1); })
+</code></pre>
+
+<p>which is so much nicer.</p>
+
+<h1>How to pass the callback</h1>
+
+<p>How would you pass the callback function to <code>factorial</code>? Well, you could do it in a number of ways. </p>
+
+<ol>
+<li><p>If the called function is running in the same process, you could pass a function pointer</p></li>
+<li><p>Or maybe you want to maintain a dictionary of <code>fn name --&gt; fn ptr</code> in your program, in which case you could pass the name</p></li>
+<li><p>Maybe your language allows you to define the function in-place, possible as a lambda! Internally it is creating some kind of object and passing a pointer, but you don't have to worry about that.</p></li>
+<li><p>Perhaps the function you are calling is running on an entirely separate machine, and you are calling it using a network protocol like HTTP. You could expose your callback as an HTTP-callable function, and pass its URL.</p></li>
+</ol>
+
+<p>You get the idea.</p>
+
+<h1>The recent rise of callbacks</h1>
+
+<p>In this web era we have entered, the services we invoke are often over the network. We often do not have any control over those services i.e. we didn't write them, we don't maintain them, we can't ensure they're up or how they're performing.</p>
+
+<p>But we can't expect our programs to block while we're waiting for these services to respond. Being aware of this, the service providers often design APIs using the callback pattern.</p>
+
+<p>JavaScript supports callbacks very nicely e.g. with lambdas and closures. And there is a lot of activity in the JavaScript world, both on the browser as well as on the server. There are even JavaScript platforms being developed for mobile.</p>
+
+<p>As we move forward, more and more of us will be writing asynchronous code, for which this understanding will be essential.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/23453352" title="short permalink to this answer" class="short-link" id="link-post-23453352">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/23453352/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-05-04 06:34:36Z" class="relativetime">May 4 '14 at 6:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1591917/rohit-chatterjee"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/f75633917903abd04d48ce99d723cf89" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1591917/rohit-chatterjee">Rohit Chatterjee</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">942</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-23453352" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-48603616" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">A concept very well explained..! :)</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1692063/piyushgoyal" title="175 reputation" class="comment-user">piyushGoyal</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment48603616_23453352"><span title="2015-05-15 04:38:00Z" class="relativetime-clean">May 15 '15 at 4:38</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-49979880" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Great explanation, +1.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3244046/lingamurthy-cs" title="4183 reputation" class="comment-user">Lingamurthy CS</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment49979880_23453352"><span title="2015-06-22 07:39:05Z" class="relativetime-clean">Jun 22 '15 at 7:39</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-23453352" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="11577955"></a>
+<div id="answer-11577955" class="answer" data-answerid="11577955" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="11577955">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">29</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I believe this "callback" jargon has been mistakenly used in a lot of places. My definition would be something like:</p>
+
+<blockquote>
+  <p>A callback function is a function that you pass to someone and let
+  them call it at some point of time.</p>
+</blockquote>
+
+<p>I think people just read the first sentence of the wiki definition:</p>
+
+<blockquote>
+  <p>a callback is a reference to executable code, or a piece of
+  executable code, that is passed as an argument to other code.</p>
+</blockquote>
+
+<p>I've been working with lots of APIs, see various of bad examples. Many people tend to name a function pointer (a reference to executable code) or anonymous functions(a piece of executable code) "callback", if they are just functions why do you need another name for this?</p>
+
+<p>Actually only the second sentence in wiki definition reveals the differences between a callback function and a normal function:</p>
+
+<blockquote>
+  <p>This allows a lower-level software layer to call a subroutine (or
+  function) defined in a higher-level layer.</p>
+</blockquote>
+
+<p>so the difference is who you are going to pass the function and how your passed in function is going to be called. If you just define a function and pass it to another function and called it directly in that function body, don't call it a callback. The definition says your passed in function is gonna be called by "lower-level" function.</p>
+
+<p>I hope people can stop using this word in ambiguous context, it can't help people to understand better only worse.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/11577955" title="short permalink to this answer" class="short-link" id="link-post-11577955">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/11577955/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/11577955/revisions" title="show all edits to this post">edited <span title="2012-07-20 12:46:48Z" class="relativetime">Jul 20 '12 at 12:46</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2012-07-20 10:58:50Z" class="relativetime">Jul 20 '12 at 10:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1338198/zane-xy"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/830f84e0e4ad0a3f841d9550fbce4d14" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1338198/zane-xy">Zane XY</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">894</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-11577955" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-22732005" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Your answer makes sense... but I'm having trouble picturing it. Can you give an example?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1675976/imray" title="3123 reputation" class="comment-user">Imray</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment22732005_11577955"><span title="2013-04-11 14:56:57Z" class="relativetime-clean">Apr 11 '13 at 14:56</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-32120244" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Zane Wong :: In the last you have written "The definition says your passed in function is gonna be called by "lower-level" function." Can you please explain what lower-level function indicates ? Its better if you give an example .</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1334073/vivek" title="766 reputation" class="comment-user">vivek</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment32120244_11577955"><span title="2014-01-23 14:44:54Z" class="relativetime-clean">Jan 23 '14 at 14:44</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-11577955" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="825640"></a>
+<div id="answer-825640" class="answer" data-answerid="825640" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="825640">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">27</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>A callback function is one that should be called when a certain condition is met. Instead of being called immediately, the callback function is called at a certain point in the future.</p>
+
+<p>Typically it is used when a task is being started that will finish asynchronously (ie will finish some time after the calling function has returned).</p>
+
+<p>For example, a function to request a webpage might require its caller to provide a callback function that will be called when the webpage has finished downloading.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/825640" title="short permalink to this answer" class="short-link" id="link-post-825640">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/825640/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2009-05-05 16:07:04Z" class="relativetime">May 5 '09 at 16:07</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/15985/thomas-bratt"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/fb915f0b3a0a397891f4fd6dab6c2ac8" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/15985/thomas-bratt">Thomas Bratt</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 15499" dir="ltr">15.5k</span><span title="23 gold badges"><span class="badge1"></span><span class="badgecount">23</span></span><span title="82 silver badges"><span class="badge2"></span><span class="badgecount">82</span></span><span title="101 bronze badges"><span class="badge3"></span><span class="badgecount">101</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-825640" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-38779939" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">In your first sentence, you say <code>"...when a condition is met"</code> but i thought callbacks are called when the parent function finishes executing and are not dependent of conditions (?).</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2058547/ojonugwa-ochalifu" title="3819 reputation" class="comment-user">ojonugwa ochalifu</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment38779939_825640"><span title="2014-07-25 08:59:07Z" class="relativetime-clean">Jul 25 '14 at 8:59</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-38815739" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">The 'certain condition' just means they generally get called for a reason, rather than at random. A callback could be called when the parent/creator is still executing - this could lead to a race condition if the programmer is not expecting it.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/15985/thomas-bratt" title="15499 reputation" class="comment-user">Thomas Bratt</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment38815739_825640"><span title="2014-07-26 12:37:30Z" class="relativetime-clean">Jul 26 '14 at 12:37</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-38816255" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Okay.Thanks for the clarification</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2058547/ojonugwa-ochalifu" title="3819 reputation" class="comment-user">ojonugwa ochalifu</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment38816255_825640"><span title="2014-07-26 13:10:45Z" class="relativetime-clean">Jul 26 '14 at 13:10</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-825640" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="7434513"></a>
+<div id="answer-7434513" class="answer" data-answerid="7434513" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="7434513">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">25</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>A layman response would be that it is a function that is not called by you but rather by the user or by the browser after a certain event has happened or after some code has been processed.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/7434513" title="short permalink to this answer" class="short-link" id="link-post-7434513">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7434513/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2011-09-15 16:48:35Z" class="relativetime">Sep 15 '11 at 16:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/947294/nateh"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/fca01ef499ca3c97fd28cefb3a367b6b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/947294/nateh">NateH</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">251</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7434513" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-13104533" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">7</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">+1 for "layman response"</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/640739/cyprus" title="1522 reputation" class="comment-user">CyprUS</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment13104533_7434513"><span title="2012-04-18 07:36:30Z" class="relativetime-clean">Apr 18 '12 at 7:36</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-29139771" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">cool enof :)   good one</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2458372/javadeveloper" title="1237 reputation" class="comment-user">JavaDeveloper</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment29139771_7434513"><span title="2013-10-28 05:42:40Z" class="relativetime-clean">Oct 28 '13 at 5:42</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-47734933" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Great explanation at  <a href="http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/" rel="nofollow">javascriptissexy.com/…</a>;  which i will repost here;  A callback function  is a function that is passed to another function  as a parameter, and the callback function is called or executed inside the otherFunction.  //Note that the item in the click method's parameter is a function, not a variable.​ ​//The item is a callback function $("#btn_1").click(function() {   alert("Btn 1 Clicked"); }); As you see in the preceding example, we pass a function as a parameter to the click method for it to execute</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2503715/marcozen" title="154 reputation" class="comment-user">MarcoZen</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment47734933_7434513"><span title="2015-04-22 16:25:49Z" class="relativetime-clean">Apr 22 '15 at 16:25</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7434513" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="21057290"></a>
+<div id="answer-21057290" class="answer" data-answerid="21057290" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="21057290">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">14</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p><em>Callbacks are most easily described in terms of the telephone system. A function call is analogous to calling someone on a telephone, asking her a question, getting an answer, and hanging up; adding a callback changes the analogy so that after asking her a question, you also give her your name and number so she can call you back with the answer.</em> </p>
+
+<p>-- Paul Jakubik, "Callback Implementations in C++"</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/21057290" title="short permalink to this answer" class="short-link" id="link-post-21057290">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/21057290/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/21057290/revisions" title="show all edits to this post">edited <span title="2015-08-28 14:52:26Z" class="relativetime">Aug 28 '15 at 14:52</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-01-11 01:13:05Z" class="relativetime">Jan 11 '14 at 1:13</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/876497/dejanlekic"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/2713233cc2e49a4db53ff08d6c114255" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/876497/dejanlekic">DejanLekic</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">7,871</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="16 silver badges"><span class="badge2"></span><span class="badgecount">16</span></span><span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-21057290" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-21057290" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="824245"></a>
+<div id="answer-824245" class="answer" data-answerid="824245" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="824245">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">11</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>A callback function is a function you specify to an existing function/method, to be invoked when an action is completed, requires additional processing, etc.</p>
+
+<p>In Javascript, or more specifically jQuery, for example, you can specify a callback argument to be called when an animation has finished.</p>
+
+<p>In PHP, the <code>preg_replace_callback()</code> function allows you to provide a function that will be called when the regular expression is matched, passing the string(s) matched as arguments.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/824245" title="short permalink to this answer" class="short-link" id="link-post-824245">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/824245/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/824245/revisions" title="show all edits to this post">edited <span title="2011-03-10 05:38:47Z" class="relativetime">Mar 10 '11 at 5:38</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2009-05-05 10:21:04Z" class="relativetime">May 5 '09 at 10:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/31671/alex"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/e96a421d76c1fc107a5d291c6999b2ef" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/31671/alex">alex</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 239165" dir="ltr">239k</span><span title="110 gold badges"><span class="badge1"></span><span class="badgecount">110</span></span><span title="599 silver badges"><span class="badge2"></span><span class="badgecount">599</span></span><span title="755 bronze badges"><span class="badge3"></span><span class="badgecount">755</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-824245" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-824245" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="4038501"></a>
+<div id="answer-4038501" class="answer" data-answerid="4038501" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="4038501">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">9</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>This makes callbacks sound like return statements at the end of methods.</p>
+
+<p>I'm not sure that's what they are.</p>
+
+<p>I think Callbacks are actually a call to a function, as a consequence of another function being invoked and completing.</p>
+
+<p>I also think Callbacks are meant to address the originating invocation, in a kind of "hey! that thing you asked for? I've done it - just thought I would let you know - back over to you".</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/4038501" title="short permalink to this answer" class="short-link" id="link-post-4038501">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4038501/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2010-10-27 23:18:11Z" class="relativetime">Oct 27 '10 at 23:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/489482/mauritico"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/3c01127659f2e27cac3e0cf561d36cd1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/489482/mauritico">Mauritico </a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">91</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-4038501" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-9149538" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">+1 for questioning Callbacks vs Return statements. I used to get caught out by this and so do many graduates who I work with.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/653708/8bitjunkie" title="3920 reputation" class="comment-user">8bitjunkie</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment9149538_4038501"><span title="2011-09-26 00:38:22Z" class="relativetime-clean">Sep 26 '11 at 0:38</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-33794298" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Good answer - helped me understand it unlike many of the other answers!</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1795862/adaam" title="2459 reputation" class="comment-user">adaam</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment33794298_4038501"><span title="2014-03-07 13:38:58Z" class="relativetime-clean">Mar 7 '14 at 13:38</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-4038501" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="5255842"></a>
+<div id="answer-5255842" class="answer" data-answerid="5255842" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="5255842">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The simple answer to this  question is that a callback function is a function that is called through a function pointer. If you pass the pointer (address) of a function as an argument to another, when that pointer is used to call the function it points to it is said that a call back is made</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/5255842" title="short permalink to this answer" class="short-link" id="link-post-5255842">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/5255842/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2011-03-10 05:27:54Z" class="relativetime">Mar 10 '11 at 5:27</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/538789/zain-ali"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/5uo65.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/538789/zain-ali">Zain Ali</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,726</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="50 silver badges"><span class="badge2"></span><span class="badgecount">50</span></span><span title="73 bronze badges"><span class="badge3"></span><span class="badgecount">73</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-5255842" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-5255842" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="20061557"></a>
+<div id="answer-20061557" class="answer" data-answerid="20061557" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="20061557">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p><strong>Call After</strong> would be a better name than the stupid name, <strong>callback</strong>. When or if condition gets met within a function, call another function, the <strong>Call After</strong> function, the one received as argument. </p>
+
+<p>Rather than hard-code an inner function within a function, one writes a function to accept an already-written <strong>Call After</strong> function as argument. The <strong>Call After</strong> might get called based on state changes detected by code in the function receiving the argument.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/20061557" title="short permalink to this answer" class="short-link" id="link-post-20061557">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/20061557/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/20061557/revisions" title="show all edits to this post">edited <span title="2013-11-19 01:59:58Z" class="relativetime">Nov 19 '13 at 1:59</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/23897/michael-petrotta"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/ec23f7cf0263a623bea6aca36a77a58b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/23897/michael-petrotta">Michael Petrotta</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 41830" dir="ltr">41.8k</span><span title="10 gold badges"><span class="badge1"></span><span class="badgecount">10</span></span><span title="100 silver badges"><span class="badge2"></span><span class="badgecount">100</span></span><span title="143 bronze badges"><span class="badge3"></span><span class="badgecount">143</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-11-19 01:40:06Z" class="relativetime">Nov 19 '13 at 1:40</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3006855/smack-macdougal"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/0d039dd7b73ba9c40398d0f20d3c59da" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3006855/smack-macdougal">Smack MacDougal</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">51</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-20061557" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-20061557" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="16371294"></a>
+<div id="answer-16371294" class="answer" data-answerid="16371294" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="16371294">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Assume we have a function <code>sort(int *arraytobesorted,void (*algorithmchosen)(void))</code> where it can accept a function pointer as its argument which can be used at some point in <code>sort()</code>'s implementation . Then , here the code that is being addressed by the function pointer <code>algorithmchosen</code> is called as <strong>callback function</strong> .</p>
+
+<p>And see the advantage is that we can choose any algorithm like:</p>
+
+<pre><code>  1.    algorithmchosen = bubblesort
+  2.    algorithmchosen = heapsort
+  3.    algorithmchosen = mergesort   ...
+</code></pre>
+
+<p>Which were, say,have been implemented with the prototype:</p>
+
+<pre><code>  1.   `void bubblesort(void)`
+  2.   `void heapsort(void)`
+  3.   `void mergesort(void)`   ...
+</code></pre>
+
+<p>This is a concept used in achieving Polymorphism in Object Oriented Programming</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/16371294" title="short permalink to this answer" class="short-link" id="link-post-16371294">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/16371294/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/16371294/revisions" title="show all edits to this post">edited <span title="2013-05-04 08:33:35Z" class="relativetime">May 4 '13 at 8:33</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-05-04 06:29:59Z" class="relativetime">May 4 '13 at 6:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1796094/e-f"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/f60a74936b11409232b85e9e991eb685" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1796094/e-f">E F</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">113</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-16371294" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-47734992" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Great explanation at javascriptissexy.com/…; which i will repost here; A callback function is a function that is passed to another function as a parameter, and the callback function is called or executed inside the otherFunction. //Note that the item in the click method's parameter is a function, not a variable.​ ​//The item is a callback function $("#btn_1").click(function() { alert("Btn 1 Clicked"); }); As you see in the preceding example, we pass a function as a parameter to the click method for it to execute –</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2503715/marcozen" title="154 reputation" class="comment-user">MarcoZen</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment47734992_16371294"><span title="2015-04-22 16:27:11Z" class="relativetime-clean">Apr 22 '15 at 16:27</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-16371294" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="8612936"></a>
+<div id="answer-8612936" class="answer" data-answerid="8612936" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="8612936">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>look at the image :)<img src="./language agnostic - What is a callback function_ - Stack Overflow_files/VN9Nj.jpg" alt="this is how it works"></p>
+
+<p>Main program calls library function (which might be system level function also) with callback function name. This callback function might be implemented in multiple way. The main program choose one callback as per requirement. </p>
+
+<p>Finally, the library function calls the callback function during execution.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/8612936" title="short permalink to this answer" class="short-link" id="link-post-8612936">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/8612936/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/8612936/revisions" title="show all edits to this post">edited <span title="2014-08-12 07:06:57Z" class="relativetime">Aug 12 '14 at 7:06</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1039149/saumya-suhagiya"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/c4428e973e8392880ba0606c7421d336" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1039149/saumya-suhagiya">Saumya Suhagiya</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">115</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2011-12-23 06:29:36Z" class="relativetime">Dec 23 '11 at 6:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details">
+        user1103138
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-8612936" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-10690783" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">7</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Would you mind also adding a <i>text</i> explanation to this? If the image vanishes, this answer loses all context.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/50049/tim-post" title="24073 reputation" class="comment-user">Tim Post<span class="mod-flair" title="moderator">♦</span></a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment10690783_8612936"><span title="2011-12-23 07:34:47Z" class="relativetime-clean">Dec 23 '11 at 7:34</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-10691519" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">text from other people explains it the best. the only thing i felt is lacking is the image :)</span>
+		            –&nbsp;<span class="comment-user">user1103138</span>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment10691519_8612936"><span title="2011-12-23 08:46:06Z" class="relativetime-clean">Dec 23 '11 at 8:46</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-11416900" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">4</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Mirror: <a href="http://en.wikipedia.org/wiki/File:Callback-notitle.svg" rel="nofollow">en.wikipedia.org/wiki/File:Callback-notitle.svg</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/412486/xp1" title="2253 reputation" class="comment-user">XP1</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#comment11416900_8612936"><span title="2012-02-01 05:16:59Z" class="relativetime-clean">Feb 1 '12 at 5:16</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-8612936" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="30161548"></a>
+<div id="answer-30161548" class="answer" data-answerid="30161548" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="30161548">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<blockquote>
+  <p>A <strong>callback function</strong>, also known as a higher-order function, is a
+  function that is passed to another function (let's call this other
+  function “otherFunction”) as a parameter, and the callback function is
+  called (or executed) inside the otherFunction.</p>
+</blockquote>
+
+<p>Or</p>
+
+<blockquote>
+  <p>A <strong>callback function</strong> is a function passed as a parameter to another
+  function.</p>
+</blockquote>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/30161548" title="short permalink to this answer" class="short-link" id="link-post-30161548">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/30161548/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-05-11 07:09:18Z" class="relativetime">May 11 '15 at 7:09</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1697099/peter-parker"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/b9993e2a5782dc7976deef709f63977b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1697099/peter-parker">Peter Parker</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,713</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-30161548" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-30161548" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="824285"></a>
+<div id="answer-824285" class="answer" data-answerid="824285" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="824285">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>This concept wasn't taught me in school, but when I started working I saw its being used at quite frequently at many places. <br>
+One important usage area is that you register one of your function as a handle (i.e. a callback) and then send a message / call some function to do some work or processing. Now after the processing is done, the called function would call our registered function (i.e. now call back is done), thus indicating us processing is done. <br> <a href="http://en.wikipedia.org/wiki/Callback_%28computer_science%29" rel="nofollow">This</a> wikipedia link explains quite well graphically. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/824285" title="short permalink to this answer" class="short-link" id="link-post-824285">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/824285/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2009-05-05 10:34:03Z" class="relativetime">May 5 '09 at 10:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/11767/chintan-parikh"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/b8a80e98643e24e4bfc850e840fea578" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/11767/chintan-parikh">Chintan Parikh</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">396</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-824285" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-824285" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="29883064"></a>
+<div id="answer-29883064" class="answer" data-answerid="29883064" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="29883064">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>A callback function, also known as a higher-order function, is a function that is passed to another function as a parameter, and the callback function is called (or executed) inside the parent function.</p>
+
+<pre><code>$("#button_1").c`enter code here`lick(function() {
+  alert("button 1 Clicked");
+});
+</code></pre>
+
+<p>Here we have pass a function as a parameter to the click method. And the click method will call (or execute) the callback function we passed to it.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/29883064" title="short permalink to this answer" class="short-link" id="link-post-29883064">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/29883064/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-04-26 20:21:58Z" class="relativetime">Apr 26 '15 at 20:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3350386/chiragk"><div class="gravatar-wrapper-32"><img src="./language agnostic - What is a callback function_ - Stack Overflow_files/d0a6c6d829912d469be3ea4b1c37ebad" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3350386/chiragk">ChiragK</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-29883064" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-29883064" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+				    <div class="question-status">
+        <h2>                    <b>protected</b> by <a href="http://stackoverflow.com/users/106224/boltclock">BoltClock</a><span class="mod-flair" title="moderator">♦</span> <span dir="ltr"><span title="2015-07-08 18:27:40Z" class="relativetime">Jul 8 '15 at 18:27</span></span>
+</h2>
+        <p>
+Thank you for your interest in this question. 
+Because it has attracted low-quality or spam answers that had to be removed, posting an answer now requires 10 <a href="http://stackoverflow.com/help/whats-reputation">reputation</a> on this site.
+<br><br>
+Would you like to answer one of these <a href="http://stackoverflow.com/unanswered?fromProtectedNotice=true">unanswered questions</a> instead?
+</p>
+    </div>
+
+
+
+
+
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2009-05-05 10:18:10Z"><b>6 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>132125 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function?lastactivity" class="lastactivity-link" title="2015-11-26 13:12:38Z">2 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1354166447",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1354166447"><div id="careersadsdoublehigh" style="display:none;"></div><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/824234/what-is-a-callback-function#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./language agnostic - What is a callback function_ - Stack Overflow_files/i(2).gif"></div>
+        <div id="hireme" class=" orange looking tagged"><a href="http://stackoverflow.com/jobs" target="_blank" data-tz="1" data-ti="0" class="top"><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li><a data-at="0" data-tz="3" data-ti="183700" href="http://stackoverflow.com/jobs/97735/senior-front-end-developer-60k-100-remote-crossover" target="_blank" title="Senior Front End Developer - $60K, 100% remote position at Crossover. Click to learn more.">Senior Front End Developer - $60K, 100% remote position<br><div class="company">Crossover</div><div class="location" title="Moscow, Russia / remote">Moscow, Russia / remote</div><span class="post-tag">jquery</span><span class="post-tag">html</span></a></li><li><a data-at="0" data-tz="3" data-ti="186712" href="http://stackoverflow.com/jobs/100765/senior-developer-front-end-40-hr-100-crossover" target="_blank" title="Senior Developer - Front End - $40/hr, 100% remote position at Crossover. Click to learn more.">Senior Developer - Front End - $40/hr, 100% remote position<br><div class="company">Crossover</div><div class="location" title="Ho Chi Minh City, Vietnam / remote">Ho Chi Minh City, Vietnam / remote</div><span class="post-tag">jquery</span><span class="post-tag">html</span></a></li><li><a data-at="0" data-tz="3" data-ti="187028" href="http://stackoverflow.com/jobs/101081/chief-architect-java-60-hr-100-remote-crossover" target="_blank" title="Chief Architect - Java - $60/hr, 100% remote position at Crossover. Click to learn more.">Chief Architect - Java - $60/hr, 100% remote position<br><div class="company">Crossover</div><div class="location" title="Istanbul, Turkey / remote">Istanbul, Turkey / remote</div><span class="post-tag">javascript</span><span class="post-tag">html</span></a></li><li><a data-at="0" data-tz="3" data-ti="175572" href="http://stackoverflow.com/jobs/89545/senior-javascript-lead-developer-for-innovative-24i" target="_blank" title="Senior JavaScript Lead-Developer for Innovative TV-app Company (EU focus) at 24i. Click to learn more.">Senior JavaScript Lead-Developer for Innovative TV-app Company (EU focus)<br><div class="company">24i</div><div class="location" title="Amsterdam, Netherlands">Amsterdam, Netherlands</div><span class="post-tag">javascript</span><span class="post-tag">css</span></a></li></ul></div><img class="impression" src="./language agnostic - What is a callback function_ - Stack Overflow_files/i(3).gif" style="display:none;"></div>
+			  
+    
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/8736378?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">25</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/8736378/what-is-a-callback-in-java?lq=1" class="question-hyperlink">What is a callback in java</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/28460365?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">-1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/28460365/making-a-function-that-calls-a-callback-function?lq=1" class="question-hyperlink">Making a function that calls a 'callback function'</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/31462803?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/31462803/whats-callback-function?lq=1" class="question-hyperlink">What's “callback function”</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/31198790?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-3</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/31198790/in-jquery-event-why-we-pass-function-as-argument?lq=1" class="question-hyperlink">In jquery event why we pass function() as argument?</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/9596276?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">190</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o?lq=1" class="question-hyperlink">How to explain callbacks in plain english? How are they different from calling one function from another function?</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/11577695?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">7</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/11577695/what-is-a-call-back-interface-in-java?lq=1" class="question-hyperlink">What is a call back interface in Java?</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/11944681?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/11944681/how-to-find-the-lat-lng-from-a-geocoded-address?lq=1" class="question-hyperlink">How to find the lat lng from a geocoded address?</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/16506351?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/16506351/why-use-a-callback-instead-of-a-normal-function-call?lq=1" class="question-hyperlink">Why use a callback instead of a normal function call?</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/12481368?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/12481368/making-jquery-get-play-nice-with-spring-mvc-backend?lq=1" class="question-hyperlink">Making jQuery GET play nice with Spring MVC backend</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/16917088?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/16917088/design-pattern-callback?lq=1" class="question-hyperlink">Design Pattern - Callback</a>
+</div>					<div class="spacer more">
+				<a href="http://stackoverflow.com/questions/linked/824234?lq=1">see more linked questions…</a>
+			</div>
+	</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/549?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">3635
+    </div>
+</a><a href="http://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication?rq=1" class="question-hyperlink">The definitive guide to form-based website authentication</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/36707?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">723
+    </div>
+</a><a href="http://stackoverflow.com/questions/36707/should-a-function-have-only-one-return-statement?rq=1" class="question-hyperlink">Should a function have only one return statement?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/79923?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">4583
+    </div>
+</a><a href="http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap?rq=1" class="question-hyperlink">What and where are the stack and heap?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/130794?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">1484
+    </div>
+</a><a href="http://stackoverflow.com/questions/130794/what-is-dependency-injection?rq=1" class="question-hyperlink">What is dependency injection?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/234075?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes large">827
+    </div>
+</a><a href="http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke?rq=1" class="question-hyperlink">What is your best programmer joke?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/500607?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes large">797
+    </div>
+</a><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1" class="question-hyperlink">What are the lesser known but useful data structures?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/2298242?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">105
+    </div>
+</a><a href="http://stackoverflow.com/questions/2298242/callback-functions-in-c?rq=1" class="question-hyperlink">Callback functions in c++</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/4324037?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">17
+    </div>
+</a><a href="http://stackoverflow.com/questions/4324037/what-are-callback-methods?rq=1" class="question-hyperlink">What are callback methods?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/9596276?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">190
+    </div>
+</a><a href="http://stackoverflow.com/questions/9596276/how-to-explain-callbacks-in-plain-english-how-are-they-different-from-calling-o?rq=1" class="question-hyperlink">How to explain callbacks in plain english? How are they different from calling one function from another function?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/14415881?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">2677
+    </div>
+</a><a href="http://stackoverflow.com/questions/14415881/pair-socks-from-a-pile-efficiently?rq=1" class="question-hyperlink">Pair socks from a pile efficiently?</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-gamedev" title="Game Development Stack Exchange"></div><a href="http://gamedev.stackexchange.com/questions/115571/what-is-game-logic-code" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:53 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is "game logic code?"
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/289743/old-old-tex-files" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    old old TEX files
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/46850/is-it-scientifically-possible-to-grow-potatoes-in-martian-soil" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it scientifically possible to grow potatoes in Martian soil?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/13749/what-is-the-reason-for-the-ariane-5-launcher-with-intelsat-29e-losing-altitude" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the reason for the Ariane 5 launcher with Intelsat 29e losing altitude?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-outdoors" title="The Great Outdoors Stack Exchange"></div><a href="http://outdoors.stackexchange.com/questions/10724/can-a-human-survive-in-saltstraumen-or-other-whirlpool" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:395 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can a human survive in Saltstraumen or other whirlpool?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/752123/how-does-an-isp-block-my-website-with-a-warning-message" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How does an ISP block my website with a warning message
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1623917/why-does-an-argument-similiar-to-0-999-1-show-999-1" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does an argument similiar to 0.999...=1 show 999...=-1?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/752146/why-are-many-admins-using-turn-off-automatic-root-certificates-update-policy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why are many admins using 'Turn off Automatic Root Certificates Update' Policy?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/308245/should-we-avoid-language-features-that-c-has-but-java-doesnt-to-increase-main" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should we avoid language features that C++ has but Java doesn't to increase maintainability?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/70299/split-flip-and-recombine-integers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Split, flip and recombine integers
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/257598/how-does-a-segmentation-fault-work-under-the-hood" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How does a Segmentation Fault work under-the-hood?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/58606/why-would-i-not-buy-a-bond-for-less-than-face-value" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why would I not buy a bond for less than face value?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/34400/how-wide-can-a-river-be" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How wide can a river be?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/231891/is-the-butterfly-effect-real" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is the butterfly effect real?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/89554/how-to-make-irregularly-shaped-objects-elements-look-clickable" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to make irregularly shaped objects / elements look clickable?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/289749/siunitx-how-can-i-typeset-1-2" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    siunitx - How can I typeset (-1/2)?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/35014951/why-is-max-slower-than-sort-in-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is max slower than sort in Python?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="http://mechanics.stackexchange.com/questions/25328/why-or-why-not-increase-engine-efficiency-by-running-the-car-fuel-lean-using" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why or why not increase engine efficiency by running the car "fuel-lean" (using a turbo or supercharger)?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/308515/whats-the-point-of-running-tests-on-a-ci-server" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What's the point of running tests on a CI server?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/105002/exponential-fitting-isnt-actually-a-bug-there" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Exponential fitting - isn't actually a BUG there?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/302610/is-the-word-repeat-really-used-as-a-synonym-of-vomit" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is the word "repeat" really used as a synonym of "vomit"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/41388/did-baroque-composers-think-of-ritardando-on-their-compositions" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Did baroque composers think of ritardando on their compositions?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/35036126/difference-between-a-b-and-a-a-b-in-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Difference between a -= b and a = a - b in Python
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/31521/is-isis-made-by-the-usa" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is ISIS made by the USA?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/824234" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/824234/ivc/80e6');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/824234/ivc/80e6" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang"></div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.1.27.3215
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () {
+        ados_setKeywords('language-agnostic,callback');; ados_load();
+    });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');
+                        ga('set', 'dimension2', '|language-agnostic|callback|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
+    
+<script async="" src="./language agnostic - What is a callback function_ - Stack Overflow_files/p.js"></script></body></html>

@@ -1,0 +1,57 @@
+1. Features of Node JS and define Node JS?
+-> JavaScript is eating the world, with new tools and enhancements arriving at a breakneck pace. With Node.js, an open source runtime system invented in 2009 by Ryan Dahl, that reach has extended to the server side.
+-> Node.js has become wildly popular, with coders everywhere using it to create APIs and build a new matrix of interoperability across the Internet.
+-> Node.js is a runtime system for creating (mostly) server-side applications. It's best known as a popular means for JavaScript coders to build real-time Web APIs.
+-> Node Package Manager works broadly
+      ->Speaking of managing library dependencies, the Node Package Manager deserves to be called out. Node Package Manager is the root of almost all deployment systems for Node.js and underlies the many PaaS (platform-as-a-service) providers for Node.js, actually making it somewhat easy to move smaller applications between providers. Its simple, dependable package management has let the Node ecosystem grow extremely well in recent history, to the point that the underlying public service now needs to scale to the next level.
+-> As an asynchronous event driven framework, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection the callback is fired, but if there is no work to be done Node is sleeping.
+-> const http = require('http');
+
+    const hostname = '127.0.0.1';
+    const port = 1337;
+
+    http.createServer((req, res) => {
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end('Hello World\n');
+    }).listen(port, hostname, () => {
+      console.log(`Server running at http://${hostname}:${port}/`);
+    });
+
+-> The main idea of Node.js: use non-blocking, event-driven I/O to remain lightweight and efficient in the face of data-intensive real-time applications that run across distributed devices.
+
+2. Show Node JS as non-blocking
+  -> in figure
+
+3. Event Handling in Node JS. Program to handle and file event
+  ->  Events#
+
+      Much of the Node.js core API is built around an idiomatic asynchronous event-driven architecture in which certain kinds of objects (called "emitters") periodically emit named events that cause Function objects ("listeners") to be called.
+
+      For instance: a net.Server object emits an event each time a peer connects to it; a fs.ReadStream emits an event when the file is opened; a stream emits an event whenever data is available to be read.
+
+      All objects that emit events are instances of the EventEmitter class. These objects expose an eventEmitter.on() function that allows one or more Functions to be attached to named events emitted by the object. Typically, event names are camel-cased strings but any valid JavaScript property key can be used.
+
+      When the EventEmitter object emits an event, all of the Functions attached to that specific event are called synchronously. Any values returned by the called listeners are ignored and will be discarded.
+
+      The following example shows a simple EventEmitter instance with a single listener. The eventEmitter.on() method is used to register listeners, while the eventEmitter.emit() method is used to trigger the event.
+
+      const EventEmitter = require('events');
+
+      class MyEmitter extends EventEmitter {}
+
+      const myEmitter = new MyEmitter();
+      myEmitter.on('event', function() {
+        console.log('an event occurred!');
+      });
+      myEmitter.emit('event');
+
+
+      File Handling
+
+      File I/O is provided by simple wrappers around standard POSIX functions. To use this module do require('fs'). All the methods have asynchronous and synchronous forms.
+
+      The asynchronous form always takes a completion callback as its last argument. The arguments passed to the completion callback depend on the method, but the first argument is always reserved for an exception. If the operation was completed successfully, then the first argument will be null or undefined.
+
+      When using the synchronous form any exceptions are immediately thrown. You can use try/catch to handle exceptions or allow them to bubble up.
+
+      Here is an example of the asynchronous version:

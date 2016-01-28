@@ -1,0 +1,82 @@
+
+
+
+var _$rh = _$rh || [];
+var _$pt = _$pt || [];//presented type
+
+ (function () {
+	 
+	var tagType="BANNER";
+	_$pt[tagType]=true;
+	if (_$rh[tagType]==null){
+		_$rh[tagType]=[];
+	}
+	_$rh[tagType].push({cid:'65655_103634_5',prefix:'imgBanner20160122/20160127_014532778_',pid:'',redirurl:'',geo:'NP',size: '728x90',ap: 'cmp=BANNER&evp=EjwceJOXo3rGTYKFGCqFlwcsWc8-Vo_0dDYCohDJlc10hpqVgEi8LgWRPhUkDfHM'});
+
+	_$rh.p = "Tsj5964Wq369";
+	if (window[_$rh.p] == null) {window[_$rh.p]=function(e){};};
+    _$rh.bp = function(e){(window[_$rh.p])(e);};
+    
+    var browser = function() {
+        var n = navigator.userAgent.toLowerCase();
+        var b = {
+            webkit: /webkit/.test(n),
+            mozilla: (/mozilla/.test(n)) && (!/(compatible|webkit)/.test(n)),
+            chrome: /chrome/.test(n) && !(/(opera|opr)/.test(n)),
+            edge: /edge/.test(n),
+            msie: ((/msie/.test(n) || /trident/.test(n) || !! window.MSStream) && !/opera/.test(n)),
+            firefox: /firefox/.test(n),
+            safari: (/safari/.test(n) && !(/chrome/.test(n))),
+            opera: /opera/.test(n)
+        };
+        b.version = (b.safari) ? (n.match(/.+(?:ri)[\/: ]([\d.]+)/) || [])[1] : (n.match(/.+(?:ox|me|ra|ie)[\/: ]([\d.]+)/) || [])[1];
+        return b;
+    }();
+
+    var trigger = "click";
+    var useCapture = (browser.firefox || browser.mozilla || browser.chrome);
+    if (browser.chrome) {
+    		trigger = "mousedown";
+    }
+
+    document.addEventListener ? document.addEventListener(trigger, _$rh.bp, useCapture) : document.attachEvent("on"+trigger, _$rh.bp);
+
+	var g = document.createElement("script");
+	g.setAttribute("id","rh_tag_"+tagType+"_65655_103634_5");
+	g.type= "text/javascript";
+    g.src= "http://cdn1.tags1.revdepo.com/banners/script/bnr-tag_1.0.9.js";
+
+	var scripts = document.getElementsByTagName("script");
+	var myScript;
+	var found=false;
+	for(var i=(scripts.length - 1);i>=0;i--){
+		myScript = scripts[i];
+		if (myScript.src.indexOf("tid=65655_103634_5")!=-1) {
+			found=true;
+			break;
+		}
+	}
+	if (!found) { //fallback
+		myScript=scripts[scripts.length - 1];
+	}
+
+	if (myScript.parentNode!=document.getElementsByTagName("head")[0]) {
+		myScript.parentNode.insertBefore( g, myScript.nextSibling );
+	}
+	else{
+		var bodyOnLoad = function() {
+			document.getElementsByTagName('body')[0].appendChild( g);
+		};
+		
+		if(window.addEventListener)
+		{
+			window.addEventListener("load", bodyOnLoad, false);
+		}
+		else if (window.attachEvent)
+		{
+			window.attachEvent("onload", bodyOnLoad);
+		} 
+	}
+	
+})();
+		

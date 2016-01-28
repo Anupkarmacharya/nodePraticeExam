@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://nodesource.com/blog/understanding-the-nodejs-event-loop/ -->
+<html lang="en" class="page-blog" data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Understanding the Node.js Event Loop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="node.js, nodejs, node, support, training, consulting, hardware, API">
+    <meta name="google-site-verification" content="xBGabUcqj4BZMX316FvyLN3xeENECEsFEu2mrhbrefQ">
+
+    <meta property="og:site_name" content="NodeSource">
+    <meta property="og:title" content="Understanding the Node.js Event Loop">
+    <meta name="og:image" content="https://nodesource.com/assets/icons/nodesource-512x512.png">
+    <meta name="og:image:type" content="image/png">
+    <meta name="og:image:width" content="512">
+    <meta name="og:image:height" content="512">
+
+    <meta name="twitter:site" content="@nodesource">
+    <meta name="twitter:title" content="Understanding the Node.js Event Loop">
+    <meta name="twitter:description" content="">
+
+    <meta name="twitter:creator" content="@nodesource">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://nodesource.com/favicon.ico">
+
+    <link rel="stylesheet" href="./Understanding the Node.js Event Loop_files/default.min.css">
+    <link rel="stylesheet" type="text/css" href="./Understanding the Node.js Event Loop_files/bundle.437628.css">
+    <link rel="stylesheet" href="./Understanding the Node.js Event Loop_files/css">
+
+    <link rel="canonical" href="http://nodesource.com/blog/understanding-the-nodejs-event-loop/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="The Back Channel by NodeSource | The Enterprise Node Company™ Providing Enterprise Node.js Training, Support, Software &amp; Consulting, Worldwide">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Understanding the Node.js Event Loop">
+    <meta property="og:description" content="Node&#39;s &quot;event loop&quot; is central to being able to handle high throughput  scenarios. It is a magical place filled with unicorns and rainbows, and is the  reason Node can essentially be &quot;single threaded&quot; while still allowing an  arbitrary number of...">
+    <meta property="og:url" content="http://nodesource.com/blog/understanding-the-nodejs-event-loop/">
+    <meta property="article:published_time" content="2015-01-21T05:00:00.000Z">
+    <meta property="article:modified_time" content="Invalid date">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Understanding the Node.js Event Loop">
+    <meta name="twitter:description" content="Node&#39;s &quot;event loop&quot; is central to being able to handle high throughput  scenarios. It is a magical place filled with unicorns and rainbows, and is the  reason Node can essentially be &quot;single threaded&quot; while still allowing an  arbitrary number of...">
+    <meta name="twitter:url" content="http://nodesource.com/blog/understanding-the-nodejs-event-loop/">
+    
+    <script type="text/javascript" async="" src="./Understanding the Node.js Event Loop_files/ga.js"></script><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "The Back Channel by NodeSource | The Enterprise Node Company™ Providing Enterprise Node.js Training, Support, Software & Consulting, Worldwide",
+    "author": {
+        "@type": "Person",
+        "name": "Trevor Norris",
+        "image": "//www.gravatar.com/avatar/b4382a49d6318ddffc40b3c49e430498?s=250&d=mm&r=x",
+        "url": "http://nodesource.com/blog/author/trevnorris",
+        "sameAs": "https://twitter.com/trevnorris",
+        "description": null
+    },
+    "headline": "Understanding the Node.js Event Loop",
+    "url": "https://nodesource.com/blog/understanding-the-nodejs-event-loop/",
+    "datePublished": "2015-01-21T05:00:00.000Z",
+    "dateModified": "Invalid date",
+    "description": "Node&#x27;s &quot;event loop&quot; is central to being able to handle high throughput  scenarios. It is a magical place filled with unicorns and rainbows, and is the  reason Node can essentially be &quot;single threaded&quot; while still allowing an  arbitrary number of..."
+}
+    </script>
+
+    <script type="text/javascript" src="./Understanding the Node.js Event Loop_files/ghost-url.min.js"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "55e2afa31254"
+});
+</script>
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="The Back Channel by NodeSource | The Enterprise Node Company™ Providing Enterprise Node.js Training, Support, Software &amp; Consulting, Worldwide" href="https://nodesource.com/blog/rss/">
+</head>
+<body class="page-blog" data-page="blog">
+    <nav class="main-navigation scrolled">
+  <div class="left">
+    <a href="https://nodesource.com/" class="logo"><img src="./Understanding the Node.js Event Loop_files/nodesource_identity(RGB)_horizontal_invert.svg"></a>
+    <ul class="primary-nav">
+      <li class="subnav"><a id="nav-products" href="https://nodesource.com/products/nsolid">N|Solid</a>
+        <ul>
+          <li><a href="https://nodesource.com/products/nsolid">Features</a></li>
+          <li><a href="https://downloads.nodesource.com/">Download</a></li>
+          <li><a href="https://docs.nodesource.com/nsolid/1.0/docs/">Documentation</a></li>
+        </ul>
+      </li>
+      <li class="subnav"><a id="nav-services" href="https://nodesource.com/services">Services</a>
+        <ul>
+          <li><a href="https://nodesource.com/services">Overview</a></li>
+          <li><a href="https://nodesource.com/services/nsupport">N|Support</a></li>
+          <li><a href="http://content.nodesource.com/upgrade-service">Upgrade Service</a></li>
+          <li><a href="https://nodesource.com/services/training">Training</a></li>
+        </ul>
+      </li>
+      <li><a id="nav-company" href="https://nodesource.com/company">Company</a></li>
+      <li><a id="nav-resources" href="https://nodesource.com/resources">Resources</a></li>
+      <li><a id="nav-blog" href="https://nodesource.com/blog/">Blog</a></li>
+    </ul>
+  </div>
+  <div class="right">
+    <ul>
+      <li>
+        <a href="https://downloads.nodesource.com/" class="button nsolid">Download N|Solid</a>
+        <a data-contact="contact" href="" class="button">Get in Touch</a>
+      </li>
+      <li><a class="icon" href="http://github.com/nodesource"><span class="icon-github"></span></a></li>
+      <li><a class="icon" href="http://twitter.com/nodesource"><span class="icon-twitter"></span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="mobile-navigation">
+  <a href="https://nodesource.com/" class="logo"><img src="./Understanding the Node.js Event Loop_files/nodesource_identity(RGB)_horizontal_invert.svg"></a>
+  <a class="nav-toggle" href="https://nodesource.com/blog/understanding-the-nodejs-event-loop/#"><span class="nav-icon-1"></span><span class="nav-icon-2"></span><span class="nav-icon-3"></span></a>
+
+  <menu class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li><a href="https://nodesource.com/">Home</a></li>
+      <li><a href="https://nodesource.com/products">Products</a></li>
+      <li><a href="https://nodesource.com/services">Services</a></li>
+      <li><a href="https://nodesource.com/company">Company</a></li>
+      <li><a href="https://nodesource.com/resources">Resources</a></li>
+      <li><a href="https://nodesource.com/blog">Blog</a></li>
+    </ul>
+    <a data-contact="" href="" class="button">Get in Touch</a>
+  </menu>
+</nav>
+
+    <header id="blog-header">
+        <a href="https://nodesource.com/blog"><img src="./Understanding the Node.js Event Loop_files/blog-text.svg"></a>
+        <a href="https://nodesource.com/blog/rss" id="rss-link"><span class="icon-rss"></span>Subscribe</a>
+    </header>
+
+    <div class="site-wrapper">
+        
+
+
+<section id="content" class="panel blog" role="main">
+    <section class="panel blog">
+        <article role="main" id="18" class="blog-post copy-container">
+          <aside class="blog-date">
+            <div class="blog-date-month">Jan</div>
+            <div class="blog-date-day">21</div>
+            <div class="blog-date-year">2015</div>
+          </aside>
+          <h1 class="blog-post-title">
+            <a href="./Understanding the Node.js Event Loop_files/Understanding the Node.js Event Loop.html">Understanding the Node.js Event Loop</a>
+          </h1>
+          <aside class="blog-meta cf">
+            <img src="./Understanding the Node.js Event Loop_files/b4382a49d6318ddffc40b3c49e430498" alt="Trevor Norris">
+            <div class="blog-meta-credit">
+              <p class="blog-meta-author">
+                by Trevor Norris
+              </p>
+                <a target="_blank" title="@trevnorris" href="http://github.com/trevnorris" class="icon icon-github"></a>
+                <a target="_blank" title="@https://twitter.com/trevnorris" href="https://twitter.com/trevnorris" class="icon icon-twitter"></a>
+            </div>
+          </aside>
+          <fieldset>
+              <legend>Share</legend>
+              <div class="social-links">
+                <a href="" class="social-button" target="_blank"><span class="icon-twitter"></span></a>
+                <a href="" class="social-button" target="_blank"><span class="icon-linkedin"></span></a>
+                <a href="" class="social-button" target="_blank"><span class="icon-facebook"></span></a>
+                <a href="" class="social-button" target="_blank"><span class="icon-googleplus"></span></a>
+              </div>
+          </fieldset>
+          <div class="blog-content markdown ns-hljs">
+            <p>Node's "event loop" is central to being able to handle high throughput <br>
+scenarios. It is a magical place filled with unicorns and rainbows, and is the <br>
+reason Node can essentially be "single threaded" while still allowing an <br>
+arbitrary number of operations to be handled in the background. This post will <br>
+shed light on how the event loop operates so you too can enjoy the magic.</p>
+
+<h2 id="eventdrivenprogramming">Event Driven Programming</h2>
+
+<p>The first thing needed in order to understand the event loop is an <br>
+understanding of the event-driven programming paradigm. This has been well <br>
+understood since the 1960's. Today, event-driven programming is largely used in <br>
+UI applications. A major usage of JavaScript is to interact with the DOM, so <br>
+the use of event-based APIs was natural.</p>
+
+<p>Defined simply: event-driven programming is application flow control that is <br>
+determined by events or changes in state. The general implementation is to have <br>
+a central mechanism that listens for events and calls a callback function once <br>
+an event has been detected (i.e. state has changed). Sound familiar? It should. <br>
+That's the basic principle behind Node's event loop.</p>
+
+<p>For those familiar with client-side JavaScript development, think of all the <br>
+<code>.on*()</code> methods, such as <code>element.onclick()</code>, that are used in conjunction
+with DOM Elements to convey user interaction. This pattern works well when a <br>
+single item can emit many possible events. Node uses this pattern in the form <br>
+of the <code>EventEmitter</code>, and is located in places such as <code>Server</code>, <code>Socket</code> and <br>
+the <code>'http'</code> module. It's useful when we need to emit more than one type of <br>
+state change from a single instance.</p>
+
+<p>Another common pattern is succeed or fail. There are two common implementations <br>
+around today. First is the "error back" callback style, where the error of the <br>
+call is the first argument passed to the callback. The second has emerged with <br>
+ES6, using <code>Promises</code>.</p>
+
+<p>The <code>'fs'</code> module mostly uses the error back callback style. It would <br>
+technically be possible to emit additional events for some calls, such as <br>
+<code>fs.readFile()</code>, but the API was made to only alert the user if the desired
+operation succeeded or if something failed. This API selection was an <br>
+architecture decision and not due to technical limitations.</p>
+
+<p>A common misconception is that event emitters are somehow asynchronous in <br>
+nature on their own, but this is incorrect. The following is a trivial code <br>
+snippet to demonstrate this.</p>
+
+<pre><code class="language-javascript hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyEmitter</span>(<span class="hljs-params"></span>) </span>{  
+  EventEmitter.call(<span class="hljs-keyword">this</span>);
+}
+util.inherits(MyEmitter, EventEmitter);
+
+MyEmitter.prototype.doStuff = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doStuff</span>(<span class="hljs-params"></span>) </span>{  
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'before'</span>)
+  emitter.emit(<span class="hljs-string">'fire'</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'after'</span>)}
+};
+
+<span class="hljs-keyword">var</span> me = <span class="hljs-keyword">new</span> MyEmitter();  
+me.on(<span class="hljs-string">'fire'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{  
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'emit fired'</span>);
+});
+
+me.doStuff();  
+<span class="hljs-comment">// Output:</span>
+<span class="hljs-comment">// before</span>
+<span class="hljs-comment">// emit fired</span>
+<span class="hljs-comment">// after</span>
+</code></pre>
+
+<p><code>EventEmitter</code> often appears asynchronous because it is regularly used to
+signal the completion of asynchronous operations, but the <code>EventEmitter</code> API is <br>
+entirely synchronous. The emit function may be called asynchronously, but note <br>
+that all the listener functions will be executed synchronously, in the order <br>
+they were added, before any execution can continue in statements following the <br>
+call to emit.</p>
+
+<h2 id="mechanicaloverview">Mechanical Overview</h2>
+
+<p>Node itself depends on multiple libraries. One of those is libuv, the magical <br>
+library that handles the queueing and processing of asynchronous events.  For <br>
+the remainder of this post please keep in mind that I won't distinguish if a <br>
+point made relates directly to Node or libuv.</p>
+
+<p>Node utilizes as much of what's already available from the operating system's <br>
+kernel as possible. Responsibilities like making write requests, holding <br>
+connections and more are therefore delegated to and handled by the system. For <br>
+example, incoming connections are queued by the system until they can be <br>
+handled by Node.</p>
+
+<p>You may have heard that Node has a thread pool, and might be wondering "if Node <br>
+pushes all those responsibilities down why would a thread pool be needed?" It's <br>
+because the kernel doesn't support doing everything asynchronously. In those <br>
+cases Node has to lock a thread for the duration of the operation so it can <br>
+continue executing the event loop without blocking.</p>
+
+<p>Here is a simplified diagram to explain the mechanical overview of when things <br>
+run:</p>
+
+<p><img src="./Understanding the Node.js Event Loop_files/event-loop.png" alt="diagram"></p>
+
+<p>A couple important notes about the inner workings of the event loop that would <br>
+be difficult to include in the diagram are:</p>
+
+<ul>
+<li><p>All callbacks scheduled via <code>process.nextTick()</code> are run at the end of a
+phase of the event loop (e.g. timers) before transitioning to the next phase.
+This creates the potential to unintentionally starve the event loop with
+recursive calls to <code>process.nextTick()</code>.</p></li>
+<li><p>"Pending callbacks" is where callbacks are queued to run that aren't handled
+by any other phase (e.g. a callback passed to <code>fs.write()</code>).</p></li>
+</ul>
+
+<h2 id="eventemitterandtheeventloop">Event Emitter and the Event Loop</h2>
+
+<p>To simplify interaction with the event loop the <code>EventEmitter</code> was created. It <br>
+is a generic wrapper that more easily allows creating event-based APIs. Because <br>
+of some of the confusion that surrounds how these two interact we'll now <br>
+address common points that tend to trip up developers.</p>
+
+<p>The following example shows how forgetting that emitting events happens <br>
+synchronously can cause events to be missed by the user.</p>
+
+<pre><code class="language-javascript hljs"><span class="hljs-comment">// Post v0.10, require('events').EventEmitter is not necessary.</span>
+<span class="hljs-keyword">var</span> EventEmitter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'events'</span>);  
+<span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyThing</span>(<span class="hljs-params"></span>) </span>{  
+  EventEmitter.call(<span class="hljs-keyword">this</span>);
+
+  doFirstThing();
+  <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">'thing1'</span>);
+}
+util.inherits(MyThing, EventEmitter);
+
+<span class="hljs-keyword">var</span> mt = <span class="hljs-keyword">new</span> MyThing();
+
+mt.on(<span class="hljs-string">'thing1'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onThing1</span>(<span class="hljs-params"></span>) </span>{  
+  <span class="hljs-comment">// Sorry, never going to happen.</span>
+});
+</code></pre>
+
+<p>The flaw with the above is that <code>'thing1'</code> can never be captured by the user <br>
+because <code>MyThing()</code> must finish instantiating before listening for any events. <br>
+Here is a simple solution that also doesn't require any additional closures:</p>
+
+<pre><code class="language-javascript hljs"><span class="hljs-keyword">var</span> EventEmitter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'events'</span>);  
+<span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyThing</span>(<span class="hljs-params"></span>) </span>{  
+  EventEmitter.call(<span class="hljs-keyword">this</span>);
+
+  doFirstThing();
+  setImmediate(emitThing1, <span class="hljs-keyword">this</span>);
+}
+util.inherits(MyThing, EventEmitter);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">emitThing1</span>(<span class="hljs-params">self</span>) </span>{  
+  self.emit(<span class="hljs-string">'thing1'</span>);
+}
+
+<span class="hljs-keyword">var</span> mt = <span class="hljs-keyword">new</span> MyThing();
+
+mt.on(<span class="hljs-string">'thing1'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onThing1</span>(<span class="hljs-params"></span>) </span>{  
+  <span class="hljs-comment">// Whoot!</span>
+});
+</code></pre>
+
+<p>The following would also work, but at a drastic performance cost:</p>
+
+<pre><code class="language-javascript hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyThing</span>(<span class="hljs-params"></span>) </span>{  
+  EventEmitter.call(<span class="hljs-keyword">this</span>);
+
+  doFirstThing();
+  <span class="hljs-comment">// Using Function#bind() makes the world much slower.</span>
+  setImmediate(<span class="hljs-keyword">this</span>.emit.bind(<span class="hljs-keyword">this</span>, <span class="hljs-string">'thing1'</span>));
+}
+util.inherits(MyThing, EventEmitter);  
+</code></pre>
+
+<p>Another problem case is with emitting errors. Figuring out problems with your <br>
+application can be hard enough, but losing the call stack can make it <br>
+impossible. A call stack is lost when an <code>Error</code> is instantiated on the far end <br>
+of an asynchronous request. The two most reasonable solutions to get around <br>
+this problem are to emit synchronously or to make sure other important <br>
+information propagates with the error.  The following example shows each one <br>
+being used:</p>
+
+<pre><code class="language-javascript hljs">MyThing.prototype.foo = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{  
+  <span class="hljs-comment">// This error will be emitted asynchronously.</span>
+  <span class="hljs-keyword">var</span> er = doFirstThing();
+  <span class="hljs-keyword">if</span> (er) {
+    <span class="hljs-comment">// The error needs to be created immediately to preserve</span>
+    <span class="hljs-comment">// the call stack.</span>
+    setImmediate(emitError, <span class="hljs-keyword">this</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'Bad stuff'</span>));
+    <span class="hljs-keyword">return</span>;
+  }
+
+  <span class="hljs-comment">// Emit the error immediately so it can be handled.</span>
+  <span class="hljs-keyword">var</span> er = doSecondThing();
+  <span class="hljs-keyword">if</span> (er) {
+    <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">'error'</span>, <span class="hljs-string">'More bad stuff'</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+}
+</code></pre>
+
+<p>Consider the situation. It may be possible that the error being emitted should <br>
+be handled immediately, before the application proceeds executing. Or it may be <br>
+something as trivial as a bad argument that needs to be reported and can easily <br>
+be handled later. Also, it's not a good idea to have a constructors that emit <br>
+errors, since the object instance's construction may very well be incomplete. <br>
+Just throw an exception in that case.</p>
+
+<h2 id="wrappingup">Wrapping Up</h2>
+
+<p>This post has been very light on the technical details and inner workings of <br>
+the event loop. Which was deliberate. That information will be covered in the <br>
+future, but first we needed to make sure every one was on the same page with <br>
+these basics. Look forward to another article on how the event loop interacts <br>
+with your system's kernel to achieve the asynchronous magic that allows Node to <br>
+run.</p>
+          </div>
+          <section class="question-box">
+            <div class="content-container">
+                <div class="icon icon-support"></div>
+                <div class="copy">
+                  <h3>Have a Question? Let's Talk!</h3>
+                  <p class="subtle">
+                    Learn more about NodeSource and how our products can help you.
+                  </p>
+                </div>
+                <div class="button-container">
+                  <a data-contact="general" href="" class="button secondary">Contact Us</a>
+                </div>
+              </div>
+          </section>
+        </article>
+      </section>
+</section>
+<section class="blog-more cf">
+
+    <div class="more-posts content-container cf">
+      <div id="blog-description">
+        <h2>Read More</h2>
+        <p class="subtitle subtle">More articles from the NodeSource team</p>
+        <a class="link-with-arrow" href="https://nodesource.com/blog/">View all Articles</a>
+      </div>
+
+      <div class="blog-list">
+        <article class="blog-list-post" id="69">
+          <h1 class="blog-post-title">
+            <a href="https://nodesource.com/blog/nodesources-docker-images/">NodeSource's Docker Images</a>
+          </h1>
+          <aside class="blog-meta cf">
+            <img class="blog-profile" src="./Understanding the Node.js Event Loop_files/wblankenship.jpg" alt="William Blankenship">
+            <p class="blog-meta-credit">
+              by William Blankenship on 28th of January, 2016
+            </p>
+          </aside>
+          <div class="post-content">
+            This week, we will be dropping the automated build status on our Docker images in an effort to deliver a higher quality experience for the consumers of these images. We will break down the path that has lead to this point in this blogpost, but here is the tl;dr: By taking full control of the Docker image build process, we can push images that have been thoroughly tested and have received the NodeSource stamp of approval. This will also
+          </div>
+          <p class="blog-read-more">
+            <a href="https://nodesource.com/blog/nodesources-docker-images/">Read More</a>
+          </p>
+        </article>
+        <article class="blog-list-post" id="75">
+          <h1 class="blog-post-title">
+            <a href="https://nodesource.com/blog/node-js-v5-5-0-release-brief/">Node.js v5.5.0 Release Brief</a>
+          </h1>
+          <aside class="blog-meta cf">
+            <img class="blog-profile" src="./Understanding the Node.js Event Loop_files/fishrock.jpg" alt="Jeremiah Senkpiel">
+            <p class="blog-meta-credit">
+              by Jeremiah Senkpiel on 28th of January, 2016
+            </p>
+          </aside>
+          <div class="post-content">
+            This week’s stable release is 👏 Evan Lucas’s 👏 first Node release as part of the Node.js release team. 🎉 As with all releases within major version lines, minor and patch upgrades should be drop-in replacements for previous versions. Full Changelog Download Overview Of a total of 59 commits: 14 were documentation-only commits. 11 only modify tests and 7 only affect internal tooling. The LICENSE file has seen a significant update, and is now compiled from the licenses of Node’
+          </div>
+          <p class="blog-read-more">
+            <a href="https://nodesource.com/blog/node-js-v5-5-0-release-brief/">Read More</a>
+          </p>
+        </article>
+        <article class="blog-list-post" id="74">
+          <h1 class="blog-post-title">
+            <a href="https://nodesource.com/blog/node-js-v4-2-6-release-brief/">Node.js v4.2.6 Release Brief</a>
+          </h1>
+          <aside class="blog-meta cf">
+            <img class="blog-profile" src="./Understanding the Node.js Event Loop_files/fishrock.jpg" alt="Jeremiah Senkpiel">
+            <p class="blog-meta-credit">
+              by Jeremiah Senkpiel on 28th of January, 2016
+            </p>
+          </aside>
+          <div class="post-content">
+            This LTS release is the result of a buildup of regular maintenance commits.  Of note, it comes with a minor libuv upgrade and an incredible amount of documentation improvements. NOTICE: v4.2.6 has been released to fix a critical regression in v4.2.5. It is highly suggested you use v4.2.6 instead of v4.2.5. This blog post covers both releases. As with all releases within major version lines, minor and patch upgrades should be drop-in
+          </div>
+          <p class="blog-read-more">
+            <a href="https://nodesource.com/blog/node-js-v4-2-6-release-brief/">Read More</a>
+          </p>
+        </article>
+      </div>
+    </div>
+</section>
+
+    </div>
+
+    <footer class="main-footer-wrap">
+        <div class="main-footer content-container">
+            <div class="main-footer-meta">
+                <a href="https://nodesource.com/" id="footer-logo"><img src="./Understanding the Node.js Event Loop_files/nodesource_identity(RGB)_mark_invert.svg"></a>
+                <ul class="main-footer-links">
+                    <li class="section">Company</li>
+                    <li><a href="https://nodesource.com/company">About</a></li>
+                    <li><a href="https://nodesource.com/press">Press</a></li>
+                    <li><a href="https://nodesource.com/nsight">N|Sight</a></li>
+                    <li><a href="https://nodesource.com/blog">Blog</a></li>
+                </ul>
+                <ul class="main-footer-links">
+                    <li class="section">Offerings</li>
+                    <li><a href="https://nodesource.com/products/nship">N|Ship</a></li>
+                    <li><a href="https://nodesource.com/products/nsolid">N|Solid</a></li>
+                    <li><a href="https://nodesource.com/services/nsupport">N|Support</a></li>
+                    <li><a href="https://nodesource.com/services/training">Training</a></li>
+                    <li><a href="https://nodesource.com/resources">Resources</a></li>
+                </ul>
+                <ul class="main-footer-links">
+                    <li class="section">Social</li>
+                    <li><a href="http://twitter.com/nodesource">Twitter</a></li>
+                    <li><a href="http://github.com/nodesource">Github</a></li>
+                    <li><a href="https://www.linkedin.com/company/nodesource">LinkedIn</a></li>
+                    <li><a href="https://medium.com/@nodesource">Medium</a></li>
+                </ul>
+            </div>
+
+            <div class="main-footer-more">
+                <div class="main-footer-support">
+                    <p>Need help with a product?</p>
+                    <p class="main-footer-support-link"><a target="_blank" href="http://support.nodesource.com/">support.nodesource.com</a></p>
+                </div>
+
+                <div class="main-footer-contact">
+                    <p>For general, product and job inquiries</p>
+                    <a data-contact="contact" class="button neutral secondary">Contact Us</a>
+                </div>
+            </div>
+
+            <p class="main-footer-fine-print">
+              Copyright © <script type="text/javascript">document.write(new Date().getFullYear())</script>2016 NodeSource
+            </p>
+        </div>
+    </footer>
+
+
+
+<script src="./Understanding the Node.js Event Loop_files/highlight.min.js"></script>
+<script type="text/javascript" src="./Understanding the Node.js Event Loop_files/bundle.437628.js"></script><form class="modal contact-form" name="contact-form">
+  <h2 class="contact-form-title">Contact Us</h2>
+  <div class="contact-form-close">×</div>
+  <div class="contact-form-main cf form-content">
+    <div class="contact-form-copy">
+      <p>
+        Questions about N|Solid or what we do?
+        We'll get back to you as soon as we can!
+      </p>
+    </div>
+    <p class="contact-form-error"></p>
+
+    <div class="contact-form-fields">
+      <div class="two-column">
+        <input required="" type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+      </div>
+      <input required="" type="email" name="email" placeholder="Email Address">
+      <input required="" type="text" name="company" placeholder="Company">
+      <input type="text" name="phone" placeholder="Phone Number (Optional)">
+
+      <label for="topic">
+        What's on your mind?
+      </label>
+      <div class="contact-form-topics">
+        
+          <div class="contact-form-checkbox">
+            <label>
+              <input type="checkbox" name="topic" value="nsolid"> N|Solid
+            </label>
+          </div>
+        
+          <div class="contact-form-checkbox">
+            <label>
+              <input type="checkbox" name="topic" value="media"> Media Inquiry
+            </label>
+          </div>
+        
+          <div class="contact-form-checkbox">
+            <label>
+              <input type="checkbox" name="topic" value="training"> Node Training
+            </label>
+          </div>
+        
+          <div class="contact-form-checkbox">
+            <label>
+              <input type="checkbox" name="topic" value="nsupport"> N|Support
+            </label>
+          </div>
+        
+          <div class="contact-form-checkbox">
+            <label>
+              <input type="checkbox" name="topic" value="nship"> N|Ship
+            </label>
+          </div>
+        
+          <div class="contact-form-checkbox">
+            <label>
+              <input type="checkbox" name="topic" value="general"> General Question
+            </label>
+          </div>
+        
+      </div>
+
+      <textarea name="message" placeholder="Further questions or comments (optional)"></textarea>
+    </div>
+
+    <input class="primary button" type="submit" value="Submit">
+    <input class="button" type="reset" value="Cancel">
+  </div>
+  <div class="contact-form-complete cf">
+    <h3>Message Sent</h3>
+    <p>Thanks for your interest in NodeSource!<br>We'll get back to you ASAP.</p>
+  </div>
+</form><div class="contact-form-background"></div>
+
+
+</body></html>

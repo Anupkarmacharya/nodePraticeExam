@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0407)http://tags1.revdepo.com/adServe/imgBanner20160122/20160127_014532778_image-banner.cib?tid=65655_103634_5&num=1&w=728&h=90&orig_url=http%3A//www.qoncious.com/questions/nodejs-vs-angularjs-comparison-and-differences&ref_url=https%3A//www.google.com.np/NP&keywords=Node.js%20vs%20AngularJS%3A%20Comparison%20and%20Review&ap=cmp%3DBANNER%26evp%3DEjwceJOXo3rGTYKFGCqFlwcsWc8-Vo_0dDYCohDJlc10hpqVgEi8LgWRPhUkDfHM -->
+<html data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+		function getRequestParameter( name )
+		{
+			try
+			{
+				var href = window.location.href;
+				var regexS = "[\\?#&]" + name + "=([^&#]*)";
+				var regex = new RegExp(regexS);
+				var results = regex.exec(href);
+		
+				if( results == null )
+					return "";
+				else {
+					return decodeURIComponent(results[1]);
+				}
+			}
+			catch(e)
+			{
+				return "";
+			}
+		}
+
+		(function () {
+            var jQScript = document.createElement('script');
+            var schema = ('https:' == document.location.protocol) ? 'https:' : 'http:';
+            var hostName = window.location.host;
+            var cdnPath = (schema == 'https:' || hostName.indexOf('cdn1.') == 0) ? '' : 'cdn1.';
+            
+            jQScript.setAttribute("type", "text/javascript");
+            if (getRequestParameter("geo")==="CN") {//China doesnt like google cdn
+            	jQScript.setAttribute("src", schema + "//" + cdnPath + hostName + '/script/3rd/jquery/1.4.2/jquery.min.js');
+            } else {
+            	jQScript.setAttribute("src", schema+'//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js');
+            }
+
+            	
+            
+            if (jQScript) {
+                document.getElementsByTagName("head")[0].appendChild(jQScript);
+            }
+        })();
+        
+        var checkJquery = function(){
+    	    if(typeof jQuery === "undefined"){
+    	        return false;
+    	    }else{
+    	        clearTimeout(interval);
+    	        jQueryIsReady();
+    	    }
+    	}
+    	var interval = setInterval(checkJquery,50);
+    	
+    	var jQueryIsReady = function(){
+    		
+            var suffix = '/banners/script/bnrcore_1.0.28.js';
+
+            
+            
+            var schema = ('https:' == document.location.protocol) ? 'https:' : 'http:';
+            var hostName = window.location.host;
+            hostName = hostName.replace("www.","");
+            var cdnPath = (schema == 'https:' || hostName.indexOf('cdn1.') == 0) ? '' : 'cdn1.';
+            
+            var fileref = document.createElement('script');
+            fileref.setAttribute("type", "text/javascript");
+            fileref.setAttribute("src", schema + "//" + cdnPath + hostName + suffix);
+            
+            
+
+            if (fileref) {
+                document.getElementsByTagName("head")[0].appendChild(fileref);
+            }
+        }
+    </script><script type="text/javascript" src="jquery.min(1).js"></script>
+    
+
+<script type="text/javascript" src="bnrcore_1.0.28.js"></script><script type="text/javascript" src="findBanner"></script></head>
+<body style="margin: 0px;">
+<div id="cdiv">
+    <div id="addiv" class="adDiv" style="visibility: hidden;cursor: pointer;">
+        <a class="adsTitle" id="ttl" href="http://tags1.revdepo.com/adServe/imgBanner20160122/20160127_014532778_image-banner.cib?tid=65655_103634_5&amp;num=1&amp;w=728&amp;h=90&amp;orig_url=http%3A//www.qoncious.com/questions/nodejs-vs-angularjs-comparison-and-differences&amp;ref_url=https%3A//www.google.com.np/NP&amp;keywords=Node.js%20vs%20AngularJS%3A%20Comparison%20and%20Review&amp;ap=cmp%3DBANNER%26evp%3DEjwceJOXo3rGTYKFGCqFlwcsWc8-Vo_0dDYCohDJlc10hpqVgEi8LgWRPhUkDfHM#">
+            <div id="ttldiv"></div>
+            <div id="desc" class="description"></div>
+            <div id="disp" class="disp"></div>
+        </a>
+    </div>
+<img id="img" src="javPlugin_728x90_en.png" title="" style="cursor: pointer;"></div>
+<script type="text/javascript">var i=1453959497931</script></body></html>
